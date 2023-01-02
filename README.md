@@ -1,7 +1,5 @@
 # E-Commerce Back-End 
 
-# Challenge 13: 
-
 ## Creating a Team Profile Generator
 
 ### User Story
