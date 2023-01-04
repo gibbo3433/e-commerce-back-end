@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     // find all function
     const tagData = await Tag.findAll({
       // added associated product data through the ProductTag junction table
-      include: [{ model: Product, through: ProductTag }],
+      include: [{ model: Product, through: ProductTag, as: "tag_products" }],
 
       // response showing the tagData
     });
@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
     // find a tag its id value
     const tagData = await Tag.findByPk(req.params.id, {
       // added associated product data through the ProductTag junction table
-      include: [{ model: Product, through: ProductTag }],
+      include: [{ model: Product, through: ProductTag, as: "tag_products" }],
     });
 
     // if no id exists, then send a message saying no tag with that id!
