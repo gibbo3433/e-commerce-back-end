@@ -24,11 +24,18 @@
 
 ## Issues identified and corrected
 
-#########################
+- Using "model" and "through"
+
+I could not remember how to add a model into my route so I needed to look into the express documentation and also back some previous lessons. I taught myself then
+how to include my models to associate other data.
+
+- POST new data
+
+I needed to look into how to code the correct data in the body in JSON to then post it to the correct category, tag or product
 
 ## Future work
   
--#######################
+- Add some additional categories into the data
 
 I have added  Javascript //notes to help any future edits by making it easier to see what the different elements are in the code so that if any collaboration work will be done in the future, it will be easiser to track and change.
 
@@ -36,10 +43,6 @@ I have added  Javascript //notes to help any future edits by making it easier to
 
 - Link to full video demonstration
 ################
-
-## Image of completed Team Profile Generator
-
-############
 
 ## Link to deployed application
 
