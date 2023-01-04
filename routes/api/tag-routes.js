@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     // find all function
     const tagData = await Tag.findAll({
       // added associated product data through the ProductTag junction table
-      include: [{ model: Product, through: ProductTag, as: "tagProducts" }],
+      include: [{ model: Product, through: ProductTag}],
 
       // response showing the tagData
     });
@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
     // find a tag its id value
     const tagData = await Tag.findByPk(req.params.id, {
       // added associated product data through the ProductTag junction table
-      include: [{ model: Product, through: ProductTag, as: "tagProducts" }],
+      include: [{ model: Product, through: ProductTag}],
     });
 
     // if no id exists, then send a message saying no tag with that id!
@@ -71,10 +71,6 @@ router.put("/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-});
-
-router.delete("/:id", (req, res) => {
-  // delete on tag by its `id` value
 });
 
 // delete a tag by its id value

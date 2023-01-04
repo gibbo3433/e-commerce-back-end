@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
       // added associated category model and product data through the ProductTag junction table
       include: [
         { model: Category },
-        { model: Tag, through: ProductTag, as: "productTags" },
+        { model: Tag, through: ProductTag},
       ],
 
       // response showing the productData
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
       // added associated category model and product data through the ProductTag junction table
       include: [
         { model: Category },
-        { model: Tag, through: ProductTag, as: "productTags" },
+        { model: Tag, through: ProductTag},
       ],
     });
 
